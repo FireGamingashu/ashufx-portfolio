@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, RefreshCw } from "lucide-react";
 import CategoryFilter from "@/app/components/CategoryFilter";
 import ThumbnailCard from "@/app/components/ThumbnailCard";
-import { fetchThumbnails, type Category, type Thumbnail } from "@/lib/thumbnailService";
+import { fetchThumbnailsByCategory, type Category, type Thumbnail } from "@/lib/thumbnailService";
 
 const ALL_CATEGORIES: Category[] = ["gaming", "educational", "etc"];
 
@@ -19,7 +19,7 @@ export default function ThumbnailsPage() {
     setError("");
     try {
       const results = await Promise.all(
-        ALL_CATEGORIES.map((cat) => fetchThumbnails(cat))
+        ALL_CATEGORIES.map((cat) => fetchThumbnailsByCategory(cat))
       );
       setThumbnails(results.flat());
     } catch (e: unknown) {
