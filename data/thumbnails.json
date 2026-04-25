@@ -1,0 +1,16 @@
+{
+  "gaming": [
+    {
+      "id": "thumb1",
+      "url": "https://res.cloudinary.com/da77xtn23/image/upload/v1777046809/ashufx/gaming/e9qrxakz2tccn7sbowbb.png",
+      "title": "Dark Fury ",
+      "tag": "FPS · Battle Royale",
+      "price": 6,
+      "category": "gaming",
+      "createdAt": 1777046809456,
+      "docId": "gaming_thumb1_1777046809456"
+    }
+  ],
+  "educational": [],
+  "etc": []
+}
