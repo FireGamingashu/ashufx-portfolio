@@ -1,0 +1,265 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  background-image: url('/ashufx-banner.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(5, 5, 7, 0.6) 0%,
+    rgba(5, 5, 7, 0.55) 50%,
+    rgba(5, 5, 7, 0.65) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bgGlow1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.bgGlow2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+  bottom: -80px;
+  right: -80px;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.ctaCard {
+  position: relative;
+  background: rgba(168, 85, 247, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 32px;
+  overflow: hidden;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.cardBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(168,85,247,0.5) 20%,
+    transparent 40%,
+    rgba(124,58,237,0.4) 60%,
+    transparent 80%,
+    rgba(168,85,247,0.5) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  animation: borderSpin 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes borderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.cardOrb1 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(168,85,247,0.15), transparent 70%);
+  top: -150px;
+  right: -100px;
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.cardOrb2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(30,27,75,0.5), transparent 70%);
+  bottom: -100px;
+  left: -50px;
+  border-radius: 50%;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: #F1F0FF;
+  margin-bottom: 20px;
+  max-width: 700px;
+  line-height: 1.15;
+}
+
+.ctaDesc {
+  max-width: 560px;
+  font-size: 1rem;
+  color: #9CA3AF;
+  line-height: 1.75;
+  margin-bottom: 44px;
+}
+
+/* Contact methods */
+.contactMethods {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  min-width: 220px;
+}
+
+.contactMethod:hover {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px);
+}
+
+.methodIcon {
+  width: 44px;
+  height: 44px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #A855F7;
+  flex-shrink: 0;
+}
+
+.methodIcon.whatsapp {
+  color: #34D399;
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.25);
+}
+
+.methodInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.methodLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.methodValue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #D8B4FE;
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.socialLink {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(168,85,247,0.2);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: rgba(168,85,247,0.12);
+  border-color: rgba(168,85,247,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(168,85,247,0.2);
+}
+
+.socialIcon {
+  font-size: 1.1rem;
+  color: #A855F7;
+}
+
+.priceReminder {
+  font-size: 0.88rem;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 48px 28px;
+  }
+  .contactMethod {
+    min-width: 100%;
+  }
+}
