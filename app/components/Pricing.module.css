@@ -1,0 +1,238 @@
+.pricing {
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent 65%);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  color: #F1F0FF;
+}
+
+.sectionSub {
+  max-width: 560px;
+  margin: 0 auto;
+  color: #6B7280;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Plans */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.planCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 24px;
+  padding: 36px 32px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planCard.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.planCard:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(168,85,247,0.08);
+}
+
+/* Featured card */
+.planCard.featured {
+  background: rgba(168, 85, 247, 0.07);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 0 1px rgba(168,85,247,0.25), 0 30px 70px rgba(0,0,0,0.5), 0 0 50px rgba(168,85,247,0.12);
+  transform: translateY(0) scale(1.03);
+}
+
+.planCard.featured.visible {
+  transform: translateY(0) scale(1.03);
+}
+
+.planCard.featured:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 0 1px rgba(168,85,247,0.4), 0 40px 80px rgba(0,0,0,0.5), 0 0 70px rgba(168,85,247,0.18);
+}
+
+.featuredRing {
+  position: absolute;
+  inset: -1px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.4) 0%, transparent 50%, rgba(124,58,237,0.3) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+}
+
+/* Badges */
+.featuredBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #A855F7, #7C3AED);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4);
+}
+
+.savingsBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #6EE7B7;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  letter-spacing: 0.06em;
+}
+
+/* Plan Header */
+.planHeader {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+}
+
+.planName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #A855F7;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.planPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.priceAmt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #F1F0FF;
+  line-height: 1;
+}
+
+.pricePeriod {
+  font-size: 0.82rem;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.planDesc {
+  font-size: 0.88rem;
+  color: #9CA3AF;
+  line-height: 1.6;
+}
+
+/* Features */
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #D1D5DB;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #A855F7;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+/* Guarantee */
+.guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 48px;
+  padding: 16px 28px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  border-radius: 50px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guaranteeIcon {
+  font-size: 1.3rem;
+}
+
+.guarantee span:last-child {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+}
+
+@media (max-width: 768px) {
+  .planCard.featured {
+    transform: none;
+  }
+  .planCard.featured.visible {
+    transform: none;
+  }
+  .planCard.featured:hover {
+    transform: translateY(-4px);
+  }
+}
