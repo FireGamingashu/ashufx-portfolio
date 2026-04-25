@@ -2,7 +2,17 @@
 import { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Upload, X, CheckCircle, Loader2 } from "lucide-react";
-import { type Category, uploadThumbnail, replaceThumbnail } from "@/lib/thumbnailService";
+import { type Category } from "@/lib/thumbnailService";
+
+// Stub functions — replaced by the /admin panel upload flow
+async function uploadThumbnail(category: Category, file: File, price: number, onProg: (n: number) => void): Promise<{ url: string }> {
+  void category; void file; void price; void onProg;
+  throw new Error("Use /admin panel to upload thumbnails");
+}
+async function replaceThumbnail(category: Category, id: string, docId: string, file: File, price: number, onProg: (n: number) => void): Promise<string> {
+  void category; void id; void docId; void file; void price; void onProg;
+  throw new Error("Use /admin panel to replace thumbnails");
+}
 
 interface Props {
   category: Category;
