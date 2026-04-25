@@ -355,7 +355,7 @@ export default function AdminPage() {
                     <div className="uploading-bar" style={{ width: "100%" }} />
                   </>
                 ) : previewUrl ? (
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img src={previewUrl} alt="Preview" className="preview-img" />
                 ) : (
                   <>
