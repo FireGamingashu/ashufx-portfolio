@@ -14,7 +14,7 @@ const plans = [
       "Full HD Resolution",
       "2 Revisions",
       "24h Turnaround",
-      "Source File",
+      "No Source File",
       "Commercial License",
     ],
     cta: "Order Now",
