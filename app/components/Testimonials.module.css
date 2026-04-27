@@ -1,0 +1,137 @@
+.testimonials {
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.sectionSub {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(20, 20, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.15);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 1.2rem;
+}
+
+.content {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(124, 58, 237, 0.3);
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.authorRole {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
