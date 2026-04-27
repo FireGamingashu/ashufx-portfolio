@@ -6,7 +6,7 @@ const plans = [
   {
     id: "single",
     name: "Single",
-    price: "$6",
+    price: "$16",
     period: "per thumbnail",
     desc: "Perfect for one-off projects or trying out the service.",
     features: [
@@ -23,7 +23,7 @@ const plans = [
   {
     id: "bundle3",
     name: "Bundle ×3",
-    price: "$16",
+    price: "$28",
     period: "for 3 thumbnails",
     desc: "Best value for creators who want consistent branding across videos.",
     features: [
@@ -38,12 +38,12 @@ const plans = [
     cta: "Get Bundle",
     featured: true,
     badge: "Best Value",
-    savings: "Save $2",
+    savings: "Save $4",
   },
   {
     id: "pack5",
     name: "Pack ×5",
-    price: "$25",
+    price: "$70",
     period: "for 5 thumbnails",
     desc: "For serious creators who need a full thumbnail library fast.",
     features: [
@@ -57,7 +57,7 @@ const plans = [
     ],
     cta: "Get Pack",
     featured: false,
-    savings: "Save $5",
+    savings: "Save $10",
   },
 ];
 
