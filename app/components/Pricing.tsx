@@ -43,7 +43,7 @@ const plans = [
   {
     id: "pack5",
     name: "Pack ×5",
-    price: "$70",
+    price: "$65",
     period: "for 5 thumbnails",
     desc: "For serious creators who need a full thumbnail library fast.",
     features: [
@@ -57,7 +57,7 @@ const plans = [
     ],
     cta: "Get Pack",
     featured: false,
-    savings: "Save $10",
+    savings: "Save $11",
   },
 ];
 
