@@ -96,7 +96,7 @@ export default function Contact() {
             </div>
 
             <p className={styles.priceReminder}>
-              Starting at just <strong style={{ color: "#A855F7" }}>$6 per thumbnail</strong> — premium quality, every time.
+              Starting at just <strong style={{ color: "#A855F7" }}>$12 per thumbnail</strong> — premium quality, every time.
             </p>
           </div>
         </div>
